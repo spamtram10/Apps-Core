@@ -23,7 +23,7 @@
 
     - name: 'Checking for existing app data'
       stat:
-        path: /opt/appdata/tautulli/config.ini
+        path: '/opt/appdata/{{pgrole}}/config.ini'
       register: confcheck
 
     # LABELS ######################################################################
@@ -71,12 +71,12 @@
       block:
         - name: 'Wating for {{pgrole}} to start'
           wait_for:
-            path: '/opt/appdata/tautulli/config.ini'
+            path: '/opt/appdata/{{pgrole}}/config.ini'
             state: present
 
         - name: Stop Container
           docker_container:
-            name: tautulli
+            name: {{pgrole}}
             state: stopped
 
         # - name: set http_username
