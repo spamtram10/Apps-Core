@@ -12,7 +12,7 @@
     # FACTS #######################################################################
     - name: 'Set Known Facts'
       set_fact:
-        pgrole: 'tautulli3'
+        pgrole: 'tautulli1'
         intport: '8181'
         extport: '8181'
         image: 'linuxserver/tautulli'
