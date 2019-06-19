@@ -12,7 +12,7 @@
     # FACTS #######################################################################
     - name: 'Set Known Facts'
       set_fact:
-        pgrole: 'portainer1'
+        pgrole: 'portainer2'
         intport: '9000'
         extport: '9000'
         image: 'portainer/portainer'
